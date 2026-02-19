@@ -1,6 +1,6 @@
 # CS23.202
-[program-2 WAP to add 2 no](#Program 1)
-## Program 1 
+[program-2 WAP to add 2 no](#Program1)
+## Program1 
 ```
 class Number {
     int a;
