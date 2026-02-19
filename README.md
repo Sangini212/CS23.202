@@ -1,6 +1,6 @@
-
 # CS23.202
 [program-2 WAP to add 2 no](#assi-1)
+##assi-1
 ```
 class Number {
     int a;
@@ -22,5 +22,6 @@ public class Main {
 
     }
 }
-<img width="509" height="398" alt="image" src="https://github.com/user-attachments/assets/f5ff22e7-7b07-4e97-b2d4-39ddc160a62c" />
+
 ```
+<img width="509" height="398" alt="image" src="https://github.com/user-attachments/assets/c10125de-bedd-442c-9d7b-3409b571fbfb" />
