@@ -43,6 +43,7 @@ public class Program1 {
 [Program 2: Addition of two distances (m, cm, mm)](#Program2)
 ## Program 2
 ```
+
 public class dist {
     public static void main(String[] args) {
         distance d1 = new distance();
@@ -231,7 +232,9 @@ class Time2 {
         Time2 result = t1.add(t2);
         result.display();
     }
-}```
+}
+```
+
 <img width="537" height="150" alt="image" src="https://github.com/user-attachments/assets/977a2056-442e-4b47-856b-4fb373d356ba" />
 
 [Program 6:Reverse a 1D array](#Program6)
