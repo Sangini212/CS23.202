@@ -22,7 +22,6 @@ class Calculator {
     }
 }
 
-
 public class Program1 {
     public static void main(String[] args) {
         Calculator c = new Calculator();
