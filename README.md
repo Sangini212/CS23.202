@@ -1,5 +1,5 @@
 # CS23.202
-[program-1 WAP to add 2 no](#Program1)
+[program-1 WAP to add 2 numbers](#Program1)
 ## Program1 
 ```
 class Number {
