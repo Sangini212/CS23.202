@@ -506,3 +506,320 @@ class PrimeNumber {
 ```
 
 <img width="525" height="156" alt="image" src="https://github.com/user-attachments/assets/bb406d67-e5cd-44b0-ac41-b64cfc358eab" />
+
+
+[Program 9: Write a Java program that contains three classes. Each class should have a method named fun() which prints numbers from 1 to 100 along with the class name as a prefix. For example, if the class name is A, the output should be a1, a2, a3, …, a100; if the class name is B, the output should be b1, b2, b3, …, b100, and similarly for class C.
+Create objects of all the classes in the main class and call the fun() method for each class to display the output.](#Program9)
+## Program 9
+```class A {
+    void fun() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("a" + i);
+        }
+    }
+}
+
+class B {
+    void fun() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("b" + i);
+        }
+    }
+}
+
+class C {
+    void fun() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("c" + i);
+        }
+    }
+}
+
+public class MainClass {
+    public static void main(String[] args) {
+        A obj1 = new A();
+        B obj2 = new B();
+        C obj3 = new C();
+
+        obj1.fun();
+        obj2.fun();
+        obj3.fun();
+    }
+}
+```
+<img width="304" height="733" alt="image" src="https://github.com/user-attachments/assets/7963316c-533c-46f9-833f-1587866eeb02" />
+<img width="316" height="788" alt="image" src="https://github.com/user-attachments/assets/0ffe83e4-4b3f-419b-9d8e-5ef87ab7f5fe" />
+<img width="218" height="792" alt="image" src="https://github.com/user-attachments/assets/358c3058-1def-4ac3-bb7e-8c4a18f13752" />
+<img width="401" height="784" alt="image" src="https://github.com/user-attachments/assets/70fc899c-29cc-4792-aa33-f4b8ada77dcd" />
+<img width="246" height="787" alt="image" src="https://github.com/user-attachments/assets/1b33d3d3-cc1e-448d-9b76-be29113fe0c8" />
+<img width="314" height="788" alt="image" src="https://github.com/user-attachments/assets/c3d1d2c4-ee68-4367-843d-5c56c8f27347" />
+<img width="280" height="766" alt="image" src="https://github.com/user-attachments/assets/13ad4128-d56a-4c34-a0fa-2c6287cd984d" />
+
+
+[Program 10: Write a Java program to create three threads using the Thread class. Each thread should print a sequence of characters (x, y, z) from 1 to 100 with a delay. Start all threads simultaneously and stop one thread after some time.](#Program10)
+## Program 10
+```package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+class X extends Thread {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("x" + i);
+            try {
+                sleep(100);
+            } catch(Exception e) {}
+        }
+    }
+}
+
+class Y extends Thread {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("y" + i);
+            try {
+                sleep(100);
+            } catch(Exception e) {}
+        }
+    }
+}
+
+class Z extends Thread {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("z" + i);
+            try {
+                sleep(100);
+            } catch(Exception e) {}
+        }
+    }
+}
+
+public class MainThread {
+    public static void main(String[] args) {
+
+        X t1 = new X();
+        Y t2 = new Y();
+        Z t3 = new Z();
+
+        t1.start();
+        t2.start();
+        t3.start();
+
+        try {
+            Thread.sleep(1000);
+            t1.stop();
+        } catch(Exception e) {}
+    }
+}
+```
+<img width="219" height="772" alt="image" src="https://github.com/user-attachments/assets/94ef0364-76dc-4515-a66a-dded1b1c3954" />
+
+[Program 11: Write a Java program to create three threads using the Runnable interface. Each thread should print a sequence of strings (alpha, beta, gamma) from 1 to 100 with a delay. Start all threads and stop one thread after some time.](#Program11)
+## Program 11
+```/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+class Alpha implements Runnable {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("alpha" + i);
+            try {
+                Thread.sleep(50);
+            } catch(Exception e) {}
+        }
+    }
+}
+
+class Beta implements Runnable {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("beta" + i);
+            try {
+                Thread.sleep(50);
+            } catch(Exception e) {}
+        }
+    }
+}
+
+class Gamma implements Runnable {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("gamma" + i);
+            try {
+                Thread.sleep(50);
+            } catch(Exception e) {}
+        }
+    }
+}
+
+public class RunnableProgram {
+    public static void main(String[] args) {
+
+        Alpha a = new Alpha();
+        Beta b = new Beta();
+        Gamma c = new Gamma();
+
+        Thread t1 = new Thread(a);
+        Thread t2 = new Thread(b);
+        Thread t3 = new Thread(c);
+
+        t1.start();
+        t2.start();
+        t3.start();
+
+        try {
+            Thread.sleep(500);
+            t1.stop();
+        } catch(Exception e) {}
+    }
+}
+
+```
+<img width="318" height="788" alt="image" src="https://github.com/user-attachments/assets/40c5068f-b9ca-4077-b6cb-5e4269815231" />
+
+
+[Program 11: Write a Java program to create three threads using the Runnable interface. Each thread should print a sequence of strings (alpha, beta, gamma) from 1 to 100 with a delay. Start all threads and stop one thread after some time.](#Program11)
+## Program 11
+```/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+class AA implements Runnable {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("A: " + i);
+        }
+    }
+}
+
+class BB implements Runnable {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("B: " + i);
+        }
+    }
+}
+
+class CC implements Runnable {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("C: " + i);
+        }
+    }
+}
+
+public class JoinProgram {
+    public static void main(String[] args) throws Exception {
+
+        Thread t1 = new Thread(new AA());
+        Thread t2 = new Thread(new BB());
+        Thread t3 = new Thread(new CC());
+
+        t1.start();
+        t1.join();
+
+        t2.start();
+        t2.join();
+
+        t3.start();
+        t3.join();
+    }
+}
+
+
+```
+<img width="307" height="401" alt="image" src="https://github.com/user-attachments/assets/8ba2d854-6663-4013-949f-8b5839fbd4e7" />
+
+[Program 11: Write a Java program to create three threads using the Runnable interface. Each thread should print a sequence of strings (alpha, beta, gamma) from 1 to 100 with a delay. Start all threads and stop one thread after some time.](#Program11)
+## Program 11
+```/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+class AA implements Runnable {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("A: " + i);
+        }
+    }
+}
+
+class BB implements Runnable {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("B: " + i);
+        }
+    }
+}
+
+class CC implements Runnable {
+    public void run() {
+        for(int i = 1; i <= 100; i++) {
+            System.out.println("C: " + i);
+        }
+    }
+}
+
+public class JoinProgram {
+    public static void main(String[] args) throws Exception {
+
+        Thread t1 = new Thread(new AA());
+        Thread t2 = new Thread(new BB());
+        Thread t3 = new Thread(new CC());
+
+        t1.start();
+        t1.join();
+
+        t2.start();
+        t2.join();
+
+        t3.start();
+        t3.join();
+    }
+}
+
+
+```
+<img width="307" height="401" alt="image" src="https://github.com/user-attachments/assets/8ba2d854-6663-4013-949f-8b5839fbd4e7" />
