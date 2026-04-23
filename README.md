@@ -823,3 +823,240 @@ public class JoinProgram {
 
 ```
 <img width="307" height="401" alt="image" src="https://github.com/user-attachments/assets/8ba2d854-6663-4013-949f-8b5839fbd4e7" />
+
+[Program 11: Write a Java program to create three threads using the Runnable interface. Each thread should print a sequence of strings (alpha, beta, gamma) from 1 to 100 with a delay. Start all threads and stop one thread after some time.](#Program11)
+## Program 11
+```
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+import java.io.*;
+
+public class CharStreamExample {
+    public static void main(String[] args) {
+        try {
+            FileWriter fw = new FileWriter("char.txt");
+            fw.write("Hello Java");
+            fw.close();
+
+            FileReader fr = new FileReader("char.txt");
+            int ch;
+
+            while ((ch = fr.read()) != -1) {
+                System.out.print((char) ch);
+            }
+
+            fr.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+```
+
+<img width="752" height="243" alt="image" src="https://github.com/user-attachments/assets/b050aff2-d8be-48a7-bece-bf1b4817de53" />
+
+[Program 11: Write a Java program to create three threads using the Runnable interface. Each thread should print a sequence of strings (alpha, beta, gamma) from 1 to 100 with a delay. Start all threads and stop one thread after some time.](#Program11)
+## Program 11
+```
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+import java.io.*;
+
+import java.io.*;
+public class ByteStreamExample {
+    public static void main(String[] args) throws Exception {
+        FileOutputStream fos = new FileOutputStream("b.txt");
+        fos.write("Hello".getBytes());
+        fos.close();
+
+        FileInputStream fis = new FileInputStream("b.txt");
+        int i;
+        while((i=fis.read())!=-1)
+            System.out.print((char)i);
+        fis.close();
+    }
+}
+```
+
+<img width="897" height="381" alt="image" src="https://github.com/user-attachments/assets/5779fb2c-58bf-4fc7-a852-e5075d3b123d" />
+
+
+
+[Program 11: Write a Java program to create three threads using the Runnable interface. Each thread should print a sequence of strings (alpha, beta, gamma) from 1 to 100 with a delay. Start all threads and stop one thread after some time.](#Program11)
+## Program 11
+```
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+import java.io.*;
+public class CopyChar {
+    public static void main(String[] args) throws Exception {
+
+        // create file first
+        FileWriter fw = new FileWriter("a.txt");
+        fw.write("Hello from Java");
+        fw.close();
+
+        FileReader fr = new FileReader("a.txt");
+        FileWriter fw2 = new FileWriter("b.txt");
+
+        int ch;
+        while ((ch = fr.read()) != -1) {
+            fw2.write(ch);
+        }
+
+        fr.close();
+        fw2.close();
+
+        System.out.println("File copied successfully");
+    }
+}
+
+```
+<img width="903" height="396" alt="image" src="https://github.com/user-attachments/assets/02c81706-db22-4fba-a30a-9a959fab84f8" />
+
+
+
+[Program 11: Write a Java program to create three threads using the Runnable interface. Each thread should print a sequence of strings (alpha, beta, gamma) from 1 to 100 with a delay. Start all threads and stop one thread after some time.](#Program11)
+## Program 11
+```
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+import java.io.*;
+public class CopyByte {
+    public static void main(String[] args) throws Exception {
+        FileInputStream fis = new FileInputStream("a.txt");
+        FileOutputStream fos = new FileOutputStream("b.txt");
+        int i;
+        while((i=fis.read())!=-1)
+            fos.write(i);
+        fis.close();
+        fos.close();
+    }
+}
+
+```
+
+<img width="889" height="407" alt="image" src="https://github.com/user-attachments/assets/2a271a7d-04a2-4822-b6df-d1d5ac87b9e1" />
+
+[Program 11: Write a Java program to create three threads using the Runnable interface. Each thread should print a sequence of strings (alpha, beta, gamma) from 1 to 100 with a delay. Start all threads and stop one thread after some time.](#Program11)
+## Program 11
+```
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+import java.io.*;
+public class BufferedExample {
+    public static void main(String[] args) throws Exception {
+        BufferedWriter bw = new BufferedWriter(new FileWriter("file.txt"));
+        bw.write("Hello");
+        bw.close();
+
+        BufferedReader br = new BufferedReader(new FileReader("file.txt"));
+        String s;
+        while((s=br.readLine())!=null)
+            System.out.println(s);
+        br.close();
+    }
+}
+
+```
+<img width="979" height="392" alt="image" src="https://github.com/user-attachments/assets/21b9e653-09b3-4f62-814d-96fa0c370585" />
+
+
+[Program 11: Write a Java program to create three threads using the Runnable interface. Each thread should print a sequence of strings (alpha, beta, gamma) from 1 to 100 with a delay. Start all threads and stop one thread after some time.](#Program11)
+## Program 11
+```
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+import java.io.*;
+public class FileExample {
+    public static void main(String[] args) throws Exception {
+        File f = new File("test.txt");
+        if(f.createNewFile())
+            System.out.println("Created");
+        else
+            System.out.println("Exists");
+    }
+}
+
+```
+<img width="879" height="393" alt="image" src="https://github.com/user-attachments/assets/20c02b39-10e2-4cd4-b0cc-db4a6aba9134" />
+
+
+[Program 11: Write a Java program to create three threads using the Runnable interface. Each thread should print a sequence of strings (alpha, beta, gamma) from 1 to 100 with a delay. Start all threads and stop one thread after some time.](#Program11)
+## Program 11
+```
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.sangini;
+
+/**
+ *
+ * @author IBM26
+ */
+import java.io.*;
+public class DataStreamExample {
+    public static void main(String[] args) throws Exception {
+        DataOutputStream dos = new DataOutputStream(new FileOutputStream("data.txt"));
+        dos.writeInt(10);
+        dos.close();
+
+        DataInputStream dis = new DataInputStream(new FileInputStream("data.txt"));
+        System.out.println(dis.readInt());
+        dis.close();
+    }
+}
+
+```
+
+<img width="880" height="398" alt="image" src="https://github.com/user-attachments/assets/c3cb78b7-970c-454c-abf4-79fbdc88535b" />
