@@ -1056,7 +1056,6 @@ public class DataStreamExample {
         dis.close();
     }
 }
-
 ```
 
 <img width="880" height="398" alt="image" src="https://github.com/user-attachments/assets/c3cb78b7-970c-454c-abf4-79fbdc88535b" />
